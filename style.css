@@ -1,0 +1,528 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'montserrat', sans-serif;
+    color: white;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    width: 100%;
+    
+    scroll-behavior: smooth;
+    /* cursor: none; */
+}
+
+#nav{
+    width: 100%;
+    height: 14rem;
+
+    position: fixed;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap:  3rem;
+
+    padding: 0 7rem;
+    /* background-color: red; */
+
+    z-index: 99;
+}
+#nav > img {
+    width: 5vmax;
+}
+
+#nav > h4{
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: large;
+    
+}
+
+#cursor{
+    width:  1.2rem;
+    height: 1.2rem;
+    background-color: lawngreen;
+
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+}
+#cursor-blur{
+    height: 20rem;
+    width: 20rem;
+    background-color: rgba(128, 255, 0, 0.265);
+    border-radius: 50%;
+    position: fixed;
+    z-index: 9;
+    filter: blur(60px);
+}
+
+video{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+}
+
+#main{
+    position: relative;
+    background-color: rgba(0,0,0, 0.4);
+}
+
+#page1{
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    text-align: center;
+}
+
+#page1 > h1 {
+    font-size: 8rem;
+    font-weight: 900;
+    position: relative;
+}
+#page1 > h1::before{
+    position: absolute;
+    content: "EAT. DRINK. PLAY.";
+    color: black;
+    top:  -6px;
+    left: -6px;
+    z-index: -1;
+    -webkit-text-stroke: 2px lawngreen;
+}
+
+#page1 > h2{
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0.7rem 0;
+}
+
+#page1 > p {
+    font-size: 1.2rem;
+    width: 40%;
+    font-weight: 300;
+}
+
+#page2{
+    min-height: 100vh;
+    width: 100%;
+}
+
+#scroller{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
+    
+    position: relative;
+    z-index: 10;
+    /* background-color: red; */
+    padding: 12vmax 0;
+}
+
+.scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+    /* background-color: yellow; */
+    
+    -webkit-text-stroke: 2px lawngreen;
+    animation: scroll 20s linear infinite;
+}
+
+.scroller-in h4{
+    display: inline-block;
+    white-space: nowrap;
+    margin-left: 4rem;    
+    /* background-color: rgba(255, 0, 0, 0.635); */
+    font-family: sans-serif;
+    font-size: 70px;
+    font-weight: 900;
+    color: transparent;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    transition: all 0.2s linear;
+}
+.scroller-in h4:hover{
+    color: greenyellow;
+}
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+#about-us{
+    width: 100%;
+    height: 15vmax;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: red; */
+    padding: 15vmax 0;
+}
+
+#about-us > img{
+    height: 12vmax;
+    width: 12vmax;
+
+    object-fit: cover;
+    border-radius: 1rem;
+    opacity: 0;
+}
+
+#about-us-in{
+    opacity: 0;
+    width: 45%;
+    text-align: center;
+    height: 12vmax;
+    /* background-color: rebeccapurple; */
+}
+#about-us-in > h1{
+    margin-bottom: 1vmax;
+    font-weight: 900;
+    font-size: 3.5rem;
+}
+#about-us-in > p{
+    font-size: 1.2rem;
+    line-height: 1.9rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+}
+
+/* ------------- CARD CONTAINER ------------- */
+
+#card-container{
+    /* background-color: red; */
+    height: 60vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+
+    padding-bottom: 5rem;
+    box-sizing: content-box;
+}
+
+.card {
+    opacity: 0;
+    width: 23%;
+    height: 80%;
+    /* background-color: teal; */
+    border-radius: 1rem;
+
+    /* ⭐ overlay ka background border radius ke baha naa jaae isliye */
+    overflow: hidden;
+    z-index: 10;
+
+    /* transition: all 0.2s ease-in-out; */
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: cardAnim 4s ease-in-out infinite alternate;
+}
+
+#card-1{
+    background: url(https://letsgowiththechildren.co.uk/wp-content/uploads/2018/10/mr-mulligans-sidcup-tonbridge-castleford-5-915px.jpg);
+    background-size: cover;
+}
+
+#card-2{
+    background: url(https://assets.londonist.com/uploads/2016/06/i875/12615281_1705596496343057_2172757389122487772_o.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#card-3{
+    background: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/sb-instagram-feed-images/427338206_3487770691485032_7675834149109054942_nlow.jpg?strip=all&lossy=1&sharp=1&w=1920&ssl=1);
+    background-size: cover;    
+}
+.card:hover{
+    /* transform: rotate3d(-1, 1, 0, 20deg); */
+}
+
+@keyframes cardAnim {
+    from{
+        transform: rotate3d(-1, 1, 0, 15deg);
+    }
+    to{
+        transform: rotate3d(-1, -1, 0, 15deg);
+    }
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+
+    background-color: #95C11E;
+    bottom: 0;
+    text-align: center;
+    opacity: 0;    
+    transition: all 0.4s linear;
+}
+
+.overlay:hover{
+    opacity: 1;
+}
+
+.overlay > h4 {
+    font-size: 1.75rem;
+    font-weight: 900;   
+    
+    padding: 3rem;
+    padding-top: 8rem;
+    color: black;
+}
+
+.overlay > p {
+    color: black;
+    font-size:  1.3rem;
+    padding: 0.5rem 1.5rem;
+}
+
+/* ----- SUBSCRIBE TO OUR NEWS LETTER ----- */
+#green-box {
+    height: 25vmax;
+    width: 100%;
+    background-color: rgb(114, 228, 0);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+#green-box > img {
+    height: 19vmax;
+}
+#dot-1{
+    transform: translateX(-5rem);
+}
+#dot-2{
+    transform: translateX(5rem);
+    overflow: hidden;
+}
+
+#green-box-in {
+    height: 100%;
+    width: 60%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#green-box-in h4{
+    font-size: 3rem;
+    text-align: center;
+    
+    background: linear-gradient(to right,
+    #7953cd 20%,
+    #e500fa 30%,
+                    #0190cd 70%,
+                    rgb(214, 76, 49) 80%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-fill-color: transparent;
+            background-size: 500% auto;
+            animation: textShine 5s ease-in-out infinite alternate;
+}
+
+#green-box-in h3{
+    font-size: 3.5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    
+    letter-spacing: 0.4rem;
+    font-weight: 900;
+    transition: all 0.3s ease;
+    -webkit-text-stroke: 3px rgb(0, 101, 12);
+    color: transparent;
+    z-index: 10;
+}
+#green-box-in > h3:hover{
+    color: rgba(34, 255, 0, 0.631);
+}
+
+@keyframes textShine {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* --------------- PAGE 3 ------------ */
+#page3{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#page3 > h3{
+    text-align: center;
+    width: 65%;
+    font-size: 2.3rem;
+}
+
+#page3 > img{
+    height: 3vmax;
+
+    position: absolute;
+}
+
+#colon-1{
+    left: 8%;
+    top: 25%;
+}
+#colon-2{
+    right: 8%;
+    bottom: 25%;
+}
+
+/* ---- PAGE 4 :  ----------- */
+
+#page4{
+    position: relative;
+    width: 100%;
+    height: 40vh;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.elem {
+    width: 25%;
+    height: 50%;
+    
+    overflow: hidden;
+    border-radius: 1.25rem;
+    position: relative;
+}
+
+
+.elem h2{
+    height: 100%;
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    z-index: 10;
+    
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 0.2rem;
+    color: black;
+    background-color: rgb(138, 212, 26);
+
+    transition: all 0.2s ease-in-out;
+}
+
+.elem img{
+    height: 100%;
+    width: 100%;
+
+    object-fit: cover;
+    z-index: 10;
+    scale: 1.1;
+    transition: all 0.5s ease;
+}
+
+.elem:hover img{
+    scale: 1;
+}
+
+.elem:hover h2{
+    background-color: transparent;
+    color: white;
+}
+
+#page4 > h1 {
+    position: absolute;
+    font-size: 6.4rem;
+    -webkit-text-stroke: 2px white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 900;
+    color: transparent;
+    top: -22%;
+}
+
+#footer{
+    height: 40vh;
+    width: 100%;
+    /* background-color: #95C11E; */
+    background: linear-gradient(to left bottom, #41c11e, lawngreen);
+
+    position: relative;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#footer > *{
+    z-index: 10;
+}
+
+#dot-foot{
+    height: 18vmax;
+    /* width: auto; */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -6%;
+    z-index: 9;
+}
+
+.foot-in:not(:nth-child(5)){
+    height: 60%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* background-color: red; */
+}
+
+.foot-in > h3 {
+    color: black;
+    font-size: 1.8rem;
+}
+
+.foot-in h5{
+    font-weight: 500;
+}
+.foot-in h5, strong{
+    color: black;
+    font-size: 1.1rem;
+}
+
+#rights-reserved{
+    position: absolute;
+    bottom: 5%;
+    font-weight: 500;
+    color: rgb(0, 69, 15);
+}
