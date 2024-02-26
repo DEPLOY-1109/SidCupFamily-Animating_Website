@@ -1,3 +1,8 @@
+## Live Demo 🚀
+Check out the live demo [🔗 click here 🚀](https://deploy-1109.github.io/SidCupFamily-Animating_Website/).
+
+- If you encounter a warning about a dangerous site, please click on "Details" and then click on "Visit this unsafe site" to proceed to the demo.
+
 # SidCup Family Golf
 
 Welcome to SidCup Family Golf's Award-Winning Website!
