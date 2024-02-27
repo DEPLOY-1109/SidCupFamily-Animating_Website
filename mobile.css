@@ -1,0 +1,61 @@
+@media screen and (max-width: 767px) {
+    #nav{
+        width: 100vw !important;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #nav :not(:first-child){
+        display: none;
+    }
+    #nav :last-child{
+        position: relative;
+        /* background-color: red; */
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #cir{
+        position: absolute;
+        height: 6vmax;
+        width:  6vmax;
+        /* padding: 1vmax; */
+        background-color: white;
+        border-radius: 50%;
+    }
+    
+    #hamburger{
+        position: absolute;
+
+        color: green;
+        font-size: 3vmax;
+    }
+    #page1>p {
+        width: 80%;
+        font-size: 2.2vmax;
+        font-weight: 300;
+    }
+
+    #cursor, #cursor-blur{
+        display: none;
+    }
+    /* ---------- main (all pages)  ----------- */
+
+    #page1  {
+        display: flex;
+        flex-direction: column;
+        gap: 2vmax;
+    }
+
+    #scroller{
+        background-color: red;
+        padding: 4vmax 0;
+    }
+
+    #about-us{
+        background-color: teal;
+    }
+
+}
