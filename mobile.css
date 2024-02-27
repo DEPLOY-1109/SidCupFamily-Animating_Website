@@ -50,12 +50,171 @@
     }
 
     #scroller{
-        background-color: red;
+        /* background-color: red; */
         padding: 4vmax 0;
     }
 
     #about-us{
-        background-color: teal;
+        /* background-color: teal; */
+        height: 50vmax;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        position: relative;
+        /* background-color: red; */
+    }
+    #about-us-in {
+        width: 85%;
+        /* background-color: green; */
+        height: fit-content;
+
+        transform: translate(0px,10%) !important;
+
+    }
+    #about-us-in>p {
+        line-height: normal;
+        font-size: 1.7vmax;
+        text-align: center;
+    }
+
+    #about-us > img {
+        position: absolute;
+        bottom: 30%;    
+        height: 22vmax;    
+        width:  22vmax;    
+    }
+    #about-us > img:first-child {
+        left: 2.2vmax;
+    }
+    #about-us > img:last-child {
+        right: 2.2vmax;
+    }
+
+    /* ------------- CARD CONTAINER ------------- */
+    #card-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        height: 100vmax;
+
+        /* background-color: antiquewhite; */
+
+        padding: 4vmax 0;
+    }
+    .card{
+        width: 80%;
+        height: 100%;
+
+        box-shadow: 0px 0px 4px white;
+    }
+
+
+    .overlay > h4{
+        padding-top: 0;
+        padding: 0;
+        font-size: 5vmax;
+    }
+
+    .overlay > p{
+        font-size: 2.5vmax;
+    }
+
+    /* GREEN BOX - SUBSCRIBE FOR NEWS LETTER */
+    #green-box {
+
+    }
+    
+    #dot-1{
+        width: 9vmax;
+        object-fit: cover;
+
+    }
+    #dot-2{
+        width: 9vmax;
+        object-fit: cover;
+    }
+
+    #green-box-in h3{
+        -webkit-text-stroke: 1px green;
+    }
+
+    /* PAGE 3: QUOTATION */
+    #page3{
+        /* background-color: teal; */
+    }
+    #page3> h3 {
+        font-size: 3vmax;
+        width: 80%;
+    }
+
+
+    /* PAGE 4 */
+    #page4{
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 120vmax;
+    }
+
+    #page4 > h1 {
+        position: static;
+        font-size: 2.8vmax;
+        -webkit-text-stroke: 1px white;
+    }
+
+    .elem{
+        width: 80%;
+        height: 30vmax;
+    }
+    
+
+    #footer{
+        /* overflow: hidden; */
+        flex-direction: row;
+        padding-bottom: 7vmax;
+    }
+
+    #logo-connectUs>img {
+        height: 8vmax;
+    }
+
+    .foot-in{
+        justify-content: space-between;
+    }
+    .foot-in 
+
+    .foot-in>h3 {
+        font-size: 1.2vmax;
+    }
+    
+
+    #rights-reserved{
+        font-size: 1.3vmax;
+        font-weight: bold;
+        bottom: 12%;
+        height: 15%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        background-color: white;
+        background: linear-gradient(to right , rgb(255, 224, 224) 20%, rgb(235, 255, 119) 40%, white 60% , rgb(170, 255, 254) 80%);
+        background-size: 500%;
+
+        animation: footShine 2s ease-in-out infinite alternate-reverse;
+    }
+
+    @keyframes footShine{
+        0%{
+            background-position: 0% 50%;
+        }
+
+        100%{
+            background-position: 100% 50%;
+        }
     }
 
 }

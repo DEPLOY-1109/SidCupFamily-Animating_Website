@@ -116,5 +116,3 @@ gsap.to('#colon-2', {
         scrub: 5
     }
 })
-
-
